@@ -1,116 +1,73 @@
-# Victor Hugo
+# 🌌 Milky-Way
+Milky Way brings forth a minimalist design ethos, allowing your work to shine like stars in the night sky. With clean lines and intuitive navigation, visitors are guided effortlessly through your portfolio, focusing solely on your creations.
 
-**A Hugo boilerplate for creating truly epic websites**
+Embrace the whimsical charm of Milky Way as it showcases your talents in a manner that's both elegant and endearing. Whether you're a designer, developer, artist, or creative professional of any kind, Milky Way provides the perfect canvas to showcase your endeavors.
 
-This is a boilerplate for using [Hugo](https://gohugo.io/) as a static site generator and [Webpack](https://webpack.js.org/) as your asset pipeline.
+With its responsive design, Milky Way ensures a seamless experience across devices, from desktops to smartphones, so your portfolio is accessible to all who wish to explore it. Let your work take center stage against the backdrop of this celestial template.
 
-Victor Hugo setup to use [PostCSS](http://postcss.org/) and [Babel](https://babeljs.io/) for CSS and JavaScript compiling/transpiling.
+<p align="center">
+  <img align="center" alt="Astro" src="https://storage.googleapis.com/dev-portal-bucket/qh7sxskkyty67x3fznww5mwv4pxq59dk2aax51.webp"/>
+</p>
 
-This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build) [![Netlify Status](https://api.netlify.com/api/v1/badges/0b0bcb79-a1d8-4b32-9566-8f30af19e4cc/deploy-status)](https://app.netlify.com/sites/astro-milky-way/deploys)
 
-## Usage
+## 🔥 Features
+- [x] Simple and clean design, perfect for showcasing your work.
+- [x] Responsive layout for seamless viewing across different devices.
+- [x] Fast and efficient, thanks to the Astro static site generator.
+- [x] Easy to customize with CSS and straightforward HTML structure.
 
-### :exclamation: Prerequisites
+## ⚓ Lighthouse Score
+<p align="center">
+  <img width="600" alt="Lighthouse Score" src="https://raw.githubusercontent.com/ttomczak3/Milky-Way/6e386e2f920c993c33d348a9c1271a1cec6c6d2b/milkyway-lighthouse-score.svg"/>
+</p>
 
-You need to have the latest/LTS [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) versions installed in order to use Victor Hugo.
+## 🚀 Getting Started
+Clone this repository to your local machine using Git.
 
-Next step, clone this repository and run:
-
-```bash
-npm install
+```scheme
+git clone https://github.com/ttomczak3/Milky-Way.git
+cd Milky-Way
 ```
 
-This will take some time and will install all packages necessary to run Victor Hugo and its tasks.
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
 
-### :construction_worker: Development
+Edit the HTML files in the `src/pages` directory to add your projects, experiences, and personal information. You can also modify the CSS styles in `src/styles` to match your preferences.
 
-While developing your website, use:
-
-```bash
-npm start
-```
-
-or for developing your website with `hugo server --buildDrafts --buildFuture`, use:
-
-```bash
-npm run preview
-```
-
-Then visit http://localhost:3000/ _- or a new browser windows popped-up already -_ to preview your new website. Webpack Dev Server will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
-
-### :package: Static build
-
-To build a static version of the website inside the `/dist` folder, run:
-
-```bash
-npm run build
-```
-
-To get a preview of posts or articles not yet published, run:
-
-```bash
-npm run build:preview
-```
-
-See [package.json](package.json#L8) for all tasks.
-
-## Structure
+## 📂 Project Structure
 
 ```
-|--site                // Everything in here will be built with hugo
-|  |--content          // Pages and collections - ask if you need extra pages
-|  |--data             // YAML data files with any data for use in examples
-|  |--layouts          // This is where all templates go
-|  |  |--partials      // This is where includes live
-|  |  |--index.html    // The index page
-|  |--static           // Files in here ends up in the public folder
-|--src                 // Files that will pass through the asset pipeline
-|  |--css              // Webpack will bundle imported css separately
-|  |--index.js         // index.js is the webpack entry for your css & js assets
+/
+├── public/
+│   └── GitHub.webp
+│   └── blog-post.webp
+│   └── blog.webp
+│   └── favicon.svg
+│   └── laptop.webp
+│   └── space.webp
+│   └── youtube.webp
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   ├── pages/
+│   ├── styles/
+│   └── env.d.ts
+└── package.json
 ```
 
-## Basic Concepts
+## 💻 Contributing
+Contributions to this project are welcome. If you find a bug or have a suggestion for improvement, please open an issue or submit a pull request.
 
-You can read more about Hugo's template language in their documentation here:
+## 📃 License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-https://gohugo.io/templates/overview/
+## ☕ Support
+If you enjoy Milky-Way and would like to show your support and appreciation through a tip, I would gratefully accept it.
 
-The most useful page there is the one about the available functions:
-
-https://gohugo.io/templates/functions/
-
-For assets that are completely static and don't need to go through the asset pipeline,
-use the `site/static` folder. Images, font-files, etc, all go there.
-
-Files in the static folder end up in the web root. So a file called `site/static/favicon.ico`
-will end up being available as `/favicon.ico` and so on...
-
-The `src/index.js` file is the entrypoint for webpack and will be built to `/dist/main.js`
-
-You can use **ES6** and use both relative imports or import libraries from npm.
-
-Any CSS file imported into the `index.js` will be run through Webpack, compiled with [PostCSS Next](http://cssnext.io/), and
-minified to `/dist/[name].[hash:5].css`. Import statements will be resolved as part of the build.
-
-## Environment variables
-
-To separate the development and production _- aka build -_ stages, all gulp tasks run with a node environment variable named either `development` or `production`.
-
-You can access the environment variable inside the theme files with `getenv "NODE_ENV"`. See the following example for a conditional statement:
-
-    {{ if eq (getenv "NODE_ENV") "development" }}You're in development!{{ end }}
-
-All tasks starting with _build_ set the environment variable to `production` - the other will set it to `development`.
-
-## Deploying to Netlify
-
-- Push your clone to your own GitHub repository.
-- [Create a new site on Netlify](https://app.netlify.com/start) and link the repository.
-
-Now Netlify will build and deploy your site whenever you push to git.
-
-You can also click this button:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/victor-hugo)
-
-## Enjoy!! 😸
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X0P7FGR)
