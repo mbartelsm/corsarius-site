@@ -1,4 +1,6 @@
 ---
+import Date from "../components/Date.astro"
+
 interface Props {
     url: string;
     image: string;
@@ -23,5 +25,6 @@ const { url, image, title, date } = Astro.props;
         <h3 class="card__title">
             {title}
         </h3>
+        <p><Date date={date} format="Do of MMMM, YYYY"></Date></p>
     </a>
 </li>

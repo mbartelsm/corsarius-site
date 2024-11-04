@@ -1,3 +1,4 @@
+
 /* Global styles */
 :root {
     --background: #1e1e2e; 
@@ -7,8 +8,8 @@
     --text-light: #1e1e2e; 
     --text-link: #78c2ad;
     --underline: #375a7f;
-    --header: 'Pacifico', cursive;
-    --body: 'Josefin Sans', sans-serif; 
+    --header: 'Texturina', cursive;
+    --body: 'Rosario', sans-serif; 
 }
 
 html {

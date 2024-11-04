@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "./Layout.astro";
+import Date from "../components/Date.astro"
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -13,7 +15,7 @@ const { frontmatter } = Astro.props;
             <span class="badge badge--item">AUTHOR</span>{frontmatter.author}
         </li>
         <li>
-            <span class="badge badge--item">PUBLISHED</span>{frontmatter.date}
+            <span class="badge badge--item">PUBLISHED</span><Date date={frontmatter.pubDate} format="Do of MMMM, YYYY"></Date>
         </li>
     </ul>
     <slot />
